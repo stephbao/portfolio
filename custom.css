@@ -1,0 +1,111 @@
+/* GENERAL */
+body {
+    margin: 0;
+}
+
+/* NAVIGATION BAR */
+
+#navbar {
+    font-family: Quicksand;
+    background-color: white;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    transition: top 0.3s;
+    opacity: .5;
+}
+
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: dimgrey;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: black;
+}
+
+/* HOME PAGE BACKGROUND IMG */
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+    background-image: url("images/closed.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    font-family: Quicksand;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: grey;
+}
+
+.hero-text a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Section title text */
+.title {
+    font-family: Quicksand;
+    text-decoration: bold;
+    text-align: center;
+    margin-top: 5%;
+    color: grey;
+}
+
+/* about me */
+
+img.me {
+    margin-top: 8%;
+    width: 100%;
+    border-radius: 50%;
+    transform: rotate(90deg);
+}
+
+/* grid */
+/* Create two equal columns that floats next to each other */
+
+.row {
+    width: 80%;
+    margin-left: 15%;
+}
+
+.column {
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 16%;
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
