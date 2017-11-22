@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stephanie Bao</title>
+
+  <!-- bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="custom.css">
 
@@ -10,35 +17,38 @@
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Crimson+Text|Nixie+One|Oxygen|Port+Lligat+Slab|Quicksand|Ribeye+Marrow|Special+Elite|Trocchi|Work+Sans|Avenir+Next" rel="stylesheet">
+
 </head>
 
 <body>
 
   <!-- NAVIGATION BAR -->
-  <div id="navbar">
-    <a href="#home">home</a>
-    <a href="#me">about me</a>
-    <a href="#portfolio">portfolio</a>
-    <a href="#contact">contact</a>
-  </div>
+    <div id="navbar">
+      <a href="#home">home</a>
+      <a href="#me">about me</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
   <!-- /NAVIGATION BAR -->
 
   <!-- HOME PAGE -->
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>Hey, I'm Stephanie</h1>
-      <a href="https://www.linkedin.com/in/stephanie-bao-96a433116/">linkedin</a> -
-      <a href="https://github.com/stephbao/">github</a> -
-      <a href="#">resume</a>
+  <section id="home">
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Hey, I'm Stephanie</h1>
+        <a href="https://www.linkedin.com/in/stephanie-bao-96a433116/">linkedin</a> -
+        <a href="https://github.com/stephbao/">github</a> -
+        <a href="#">resume</a>
+      </div>
     </div>
-  </div>
-  <!-- HOME PAGE -->
+  </section>
+  <!-- /HOME PAGE -->
 
   <!-- ABOUT ME -->
   <section id="me">
     <div class="title">
       <h1>about me</h1>
-      <div class="row">
+      <div class="myrow">
         <div class="column">
           <img class="me" src="images/me.jpg" alt="Avatar"></img>
         </div>
@@ -48,6 +58,74 @@
       </div>
     </div>
   </section>
+  <!-- /ABOUT ME-->
+
+  <!-- WORK -->
+  <section id="projects">
+    <div class="title">
+      <h1>work</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="images/closed.png">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="images/closed.png">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="images/closed.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="images/closed.png">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="images/closed.png">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="images/closed.png">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- /WORK -->
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="title">
+      <h1>contact</h1>
+      <div class="container">
+        <form action="/action_page.php">
+          <input type="text" id="name" name="name" placeholder="Name">
+
+          <input type="text" id="email" name="email" placeholder="E-mail">
+
+          <textarea id="subject" name="subject" placeholder="Text" style="height:200px"></textarea>
+
+          <input type="submit" value="Submit">
+        </form>
+        </div>
+    </div>
+  </section>
+  <!-- /CONTACT-->
 
 </body>
 
