@@ -1,36 +1,57 @@
 /* GENERAL */
 body {
     margin: 0;
+    font-family: Quicksand;
+    color: grey;
+    float: center;
+    display: block;
+    overflow: auto;
 }
 
 section {
     height: 100%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+    display: block;
 }
 
 /* TYPOGRAPHY */
+.container {
+    text-align: center;
+}
+
 h1 {
     margin-bottom: 5%;
+}
+
+
+p {
+    display: block;
+    font-family: Quicksand;
+    color: grey;
 }
 
 /* NAVIGATION BAR */
 
 #navbar {
     font-family: Quicksand;
-    background-color: white;
+    background-color: #f5f0f0;
     text-align: right;
     position: fixed;
     top: -50px;
     width: 100%;
     transition: top 0.3s;
-    opacity: .5;
-    height: 5%;
+    height: 50px;
+    opacity: .6;
+    z-index: 99;
 }
 
 /* Style the navbar links */
 #navbar a {
+    opacity: 1;
     text-align: right;
     display: inline-block;
-    color: dimgrey;
+    color: grey;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -77,51 +98,17 @@ body, html {
     font-family: Quicksand;
     text-decoration: bold;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 4%;
     color: grey;
-}
-
-/* about me */
-
-img.me {
-    margin-top: 8%;
     width: 100%;
-    border-radius: 50%;
-    transform: rotate(90deg);
 }
-
-/* grid */
-/* Create two equal columns that floats next to each other */
-
-.myrow {
-    width: 80%;
-    margin-left: 15%;
-}
-
-.column {
-    text-align: left;
-    /*margin-bottom: 16%;*/
-    float: left;
-    width: 40%;
-    padding: 10px;
-}
-
-/* Clear floats after the columns */
-.myrow:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Two columns stack */
-@media (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
-}
-
 
 /* Contact */
+
+form {
+    display: block;
+    text-align: center;
+}
 
 input[type=text], select, textarea {
     width: 60%;
@@ -147,4 +134,37 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #45a049;
+}
+
+/* Portfolio images - hover */
+
+.portfolio img {
+    display: block;
+    transition: .5s ease;
+    width: 300px;
+    opacity: 1;
+}
+
+.portfolio img:hover {
+    transition: .5s ease;
+    opacity: .8;
+    text-align: center;
+}
+
+/* Parallax */
+.parallax1, .parallax2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1 {
+    background-image: url("images/do.jpg");
+    min-height: 100px;
+}
+
+.parallax2 {
+    background-image: url("images/me.jpg");
+    min-height: 300px;
 }
