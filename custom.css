@@ -1,27 +1,34 @@
 /* GENERAL */
 body {
+    position: relative;
+    overflow: auto;
     margin: 0;
     font-family: Quicksand;
     color: grey;
-    float: center;
-    display: block;
-    overflow: auto;
+    background-color: white;
 }
 
 section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 1%;
     margin-bottom: 1%;
     display: block;
 }
 
-/* TYPOGRAPHY */
+#home {
+    height: 100%;
+}
+
 .container {
     text-align: center;
+    display: block;
 }
+
+/* TYPOGRAPHY */
 
 h1 {
     margin-bottom: 5%;
+    color: inherit;
 }
 
 
@@ -33,32 +40,45 @@ p {
 
 /* NAVIGATION BAR */
 
-#navbar {
-    font-family: Quicksand;
-    background-color: #f5f0f0;
-    text-align: right;
-    position: fixed;
-    top: -50px;
-    width: 100%;
-    transition: top 0.3s;
-    height: 50px;
-    opacity: .6;
-    z-index: 99;
+li {
+    background-color: black;
 }
 
-/* Style the navbar links */
-#navbar a {
-    opacity: 1;
-    text-align: right;
-    display: inline-block;
-    color: grey;
-    text-align: center;
-    padding: 15px;
+.collapse ul {
+    margin-top: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar {
+    background-color: black;
+    border: none;
+    color: black;
+}
+
+.navbar-inverse .navbar-brand {
+    margin-left: 3%;
+    color: white;
+}
+
+.navbar-inverse {
+    color: black;
+    background-color: black;
+    top: -50px;
+    height: 50px;
+    transition: top 0.5s;
+    border:none;
+}
+
+.navbar-inverse a {
+    color: white;
     text-decoration: none;
 }
 
-#navbar a:hover {
-    color: black;
+.navbar-toggle {
+    border: none;
 }
 
 /* HOME PAGE BACKGROUND IMG */
@@ -85,7 +105,7 @@ body, html {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: grey;
+    color: black;
 }
 
 .hero-text a {
@@ -95,6 +115,7 @@ body, html {
 
 /* Section title text */
 .title {
+    position: relative;
     font-family: Quicksand;
     text-decoration: bold;
     text-align: center;
@@ -106,7 +127,6 @@ body, html {
 /* Contact */
 
 form {
-    display: block;
     text-align: center;
 }
 
@@ -141,7 +161,8 @@ input[type=submit]:hover {
 .portfolio img {
     display: block;
     transition: .5s ease;
-    width: 300px;
+    width: 100%;
+    min-width: 300px;
     opacity: 1;
 }
 
@@ -153,6 +174,7 @@ input[type=submit]:hover {
 
 /* Parallax */
 .parallax1, .parallax2 {
+    display: block;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -161,10 +183,162 @@ input[type=submit]:hover {
 
 .parallax1 {
     background-image: url("images/do.jpg");
-    min-height: 100px;
+    min-height: 130px;
+    overflow: hidden;
 }
 
 .parallax2 {
     background-image: url("images/me.jpg");
     min-height: 300px;
+}
+
+/* Arrow Button */
+
+.down {
+    position: absolute;
+    left: 49.5%;
+    bottom: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: -15px;
+    display: block;
+    z-index: 10;
+    text-align: center;
+}
+
+.arrow {
+    font-size: 36px;
+}
+
+.fa {
+    color: white;
+}
+
+/* Animations */
+
+    /* arrow */
+.down a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    -webkit-animation-name: fall;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-name: fall;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+    /* about me */
+.fadein {
+    animation: fadein 2s;
+}
+
+.fadeinslow {
+    animation: fadein 3s;
+}
+
+.fadeup {
+    animation: fadeup 2s;
+}
+
+.fadedown {
+    animation: fadedown 2s;
+}
+
+.fadeleft {
+    animation: fadeleft 2s;
+}
+
+.faderight {
+    animation: faderight 2s;
+}
+
+.type {
+    animation: type 3s;
+}
+
+/* keyframes */
+
+@keyframes fall {
+    0% {
+        top: -10px;
+        opacity: 0;
+    }
+
+    30% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 15px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadedown {
+    0% {
+        opacity: 0;
+        transform: translate(0, -100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeleft {
+    0% {
+        opacity: 0;
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes faderight {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }

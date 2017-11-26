@@ -11,9 +11,16 @@
 
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- javascript -->
   <script src="page.js"></script>
+
+  <!-- wow -->
+  <script src="assets/wow/dist/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Crimson+Text|Nixie+One|Oxygen|Port+Lligat+Slab|Quicksand|Ribeye+Marrow|Special+Elite|Trocchi|Work+Sans|Avenir+Next" rel="stylesheet">
@@ -22,36 +29,58 @@
 
 <body>
 
-  <!-- NAVIGATION BAR -->
-    <div id="navbar">
-      <a href="#home">home</a>
-      <a href="#me">about me</a>
-      <a href="#projects">projects</a>
-      <a href="#contact">contact</a>
-    </div>
-  <!-- /NAVIGATION BAR -->
-
   <!-- HOME PAGE -->
   <section id="home">
     <div class="hero-image">
       <div class="hero-text">
-        <h1>Hey, I'm Stephanie</h1>
-        <a href="https://www.linkedin.com/in/stephanie-bao-96a433116/">linkedin</a> -
-        <a href="https://github.com/stephbao/">github</a> -
-        <a href="#">resume</a>
+          <h1 class="wow fadedown">Hey, I'm Stephanie</h1>
+          <a href="https://www.linkedin.com/in/stephanie-bao-96a433116/">linkedin</a> -
+          <a href="https://github.com/stephbao/">github</a> -
+          <a href="#">resume</a>
+      </div>
+    </div>
+
+    <div class="down">
+      <div class="arrow">
+        <a href="#me">
+          <i class="fa fa-angle-double-down"></i>
+        </a>
       </div>
     </div>
   </section>
   <!-- /HOME PAGE -->
 
+  <!-- BOOTSTRAP NAVBAR -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">STEPHANIE BAO</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home">home</a></li>
+          <li><a href="#me">about me</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- /BOOTSTRAP NAVBAR -->
+
   <!-- ABOUT ME -->
   <section id="me">
-    <div class="title">
+    <div class="title wow fadedown">
       <h1>about me</h1>
     </div>
     <div class="parallax2"></div>
     <div class="container">
-      <div class="row">
+      <div class="row wow fadeup">
         <div class="col-md-4">
           <h3>Carnegie Mellon University</h3>
           <div>2015 - 2018</div>
@@ -68,88 +97,88 @@
           <hr>
         </div>
       </div>
-      <div class="row">
-      </div>
     </div>
     <div class="parallax1"></div>
   </section>
 
   <!-- /ABOUT ME-->
-<br><br><br><br><br><br><br><br><br><br><br><br>
+
   <!-- WORK -->
   <section id="projects">
-    <div class="title">
+    <div class="title wow fadedown">
       <h1>work</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="portfolio">
-                <img src="images/closed.png">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="portfolio">
-                <img src="images/closed.png">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="portfolio">
-                <img src="images/closed.png">
-              </div>
+    </div>
+    <div class="container wow fadeinslow">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="img-responsive thumbnail">
+            <div class="portfolio">
+              <img src="images/closed.png">
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="portfolio">
-                <img src="images/closed.png">
-              </div>
+        <div class="col-md-4">
+          <div class="img-responsive thumbnail">
+            <div class="portfolio">
+              <img src="images/closed.png">
             </div>
           </div>
+        </div>
 
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="portfolio">
-                <img src="images/closed.png">
-              </div>
+        <div class="col-md-4">
+          <div class="img-responsive thumbnail">
+            <div class="portfolio">
+              <img src="images/closed.png">
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="portfolio">
-                <img src="images/closed.png">
-              </div>
-            </div>
-          </div>
+        </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="img-responsive thumbnail">
+            <div class="portfolio">
+              <img src="images/closed.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="img-responsive thumbnail">
+            <div class="portfolio">
+              <img src="images/closed.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="img-responsive thumbnail">
+            <div class="portfolio">
+              <img src="images/closed.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- /WORK -->
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="title">
+    <div class="title wow fadedown">
       <h1>contact</h1>
-      <div class="container">
-        <form action="/action_page.php">
-          <input type="text" id="name" name="name" placeholder="Name">
+    </div>
+    <div class="container">
+      <form action="/action_page.php">
+        <div class="wow faderight"><input type="text" id="name" name="name" placeholder="Name"></div>
 
-          <input type="text" id="email" name="email" placeholder="E-mail">
+        <div class="wow fadeleft"><input type="text" id="email" name="email" placeholder="E-mail"></div>
 
-          <textarea id="subject" name="subject" placeholder="Text" style="height:200px"></textarea>
+        <div class="wow fadedown"><textarea id="subject" name="subject" placeholder="Text" style="height:200px"></textarea></div>
 
-          <input type="submit" value="Submit">
-        </form>
-        </div>
+        <div class="wow fadeup"><input type="submit" value="Submit"></div>
+      </form>
     </div>
   </section>
   <!-- /CONTACT-->

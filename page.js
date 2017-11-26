@@ -9,15 +9,17 @@ function scrollFunction() {
   }
 }
 
-// TYPEWRITER EFFECT
-var i = 0;
-var text = 'Hey, Im Stephanie';
-var speed = 50;
-
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("intro").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 700, function(){
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
