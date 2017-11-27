@@ -59,7 +59,7 @@ li {
 }
 
 .navbar-inverse .navbar-brand {
-    margin-left: 3%;
+    margin-left: po%;
     color: white;
 }
 
@@ -106,6 +106,11 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
+}
+
+.hero-text h1 {
+    color: lightcoral;
+    font-weight: bold;
 }
 
 .hero-text a {
@@ -158,18 +163,46 @@ input[type=submit]:hover {
 
 /* Portfolio images - hover */
 
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: lightcoral;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.portfolio:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio {
+    position: relative;
+}
+
 .portfolio img {
     display: block;
-    transition: .5s ease;
     width: 100%;
+    height: auto;
     min-width: 300px;
     opacity: 1;
 }
 
-.portfolio img:hover {
-    transition: .5s ease;
-    opacity: .8;
-    text-align: center;
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 /* Parallax */
