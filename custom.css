@@ -3,15 +3,12 @@ body {
     position: relative;
     overflow: auto;
     margin: 0;
-    font-family: Quicksand;
     color: grey;
     background-color: white;
 }
 
 section {
     min-height: 100%;
-    padding-top: 1%;
-    margin-bottom: 1%;
     display: block;
 }
 
@@ -26,62 +23,93 @@ section {
 
 /* TYPOGRAPHY */
 
-h1 {
-    margin-bottom: 5%;
-    color: inherit;
-}
-
-
 p {
     display: block;
     font-family: Quicksand;
     color: grey;
 }
 
-/* NAVIGATION BAR */
+/* NAVIGATION MENU */
 
-li {
+.menubg {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     background-color: black;
+    opacity: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
-.collapse ul {
-    margin-top: 0;
+.menu {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-    color: white;
-}
-
-.navbar {
-    background-color: black;
-    border: none;
-    color: black;
-}
-
-.navbar-inverse .navbar-brand {
-    margin-left: po%;
-    color: white;
-}
-
-.navbar-inverse {
-    color: black;
-    background-color: black;
-    top: -50px;
-    height: 50px;
-    transition: top 0.5s;
-    border:none;
-}
-
-.navbar-inverse a {
-    color: white;
+.menubg a {
+    padding: 8px;
     text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-.navbar-toggle {
+.menubg a:hover {
+    color: turquoise;
+}
+
+.button {
+    top: 50%;
+    left: -7%;
+    position: fixed;
+    padding: 7%;
+    border-radius: 50%;
     border: none;
+    color: white;
+    background-color: turquoise;
+    z-index: 99;
+    display: block;
 }
 
-/* HOME PAGE BACKGROUND IMG */
+.button:hover {
+    background-color: black;
+    transition: 0.5s ease;
+}
+
+.button1 {
+    top: 50%;
+    left: -7%;
+    position: fixed;
+    padding: 7%;
+    border-radius: 50%;
+    border: none;
+    color: black;
+    background-color: turquoise;
+    z-index: 99;
+    display: none;
+}
+
+.button1:hover {
+    background-color: white;
+    transition: 0.5s ease;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .menubg a {font-size: 20px}
+    .menubg {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
 
 body, html {
     height: 100%;
@@ -89,11 +117,12 @@ body, html {
 
 /* The hero image */
 .hero-image {
-    background-image: url("images/closed.png");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: transparent;
+    border: 10px solid black;
+    height: 90%;
+    width: 90%;
+    margin-top: 2.5%;
+    margin-left: 5%;
     position: relative;
 }
 
@@ -109,7 +138,8 @@ body, html {
 }
 
 .hero-text h1 {
-    color: lightcoral;
+    font-family: 'Playfair Display', serif;
+    color: black;
     font-weight: bold;
 }
 
@@ -230,14 +260,8 @@ input[type=submit]:hover {
 .down {
     position: absolute;
     left: 49.5%;
-    bottom: 40px;
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    margin-left: -15px;
+    bottom: 1%;
     display: block;
-    z-index: 10;
     text-align: center;
 }
 
@@ -246,7 +270,7 @@ input[type=submit]:hover {
 }
 
 .fa {
-    color: white;
+    color: black;
 }
 
 /* Animations */
