@@ -1,9 +1,10 @@
 /* GENERAL */
 body {
+    font-family: Quicksand;
     position: relative;
     overflow: auto;
     margin: 0;
-    color: grey;
+    color: black;
     background-color: white;
 }
 
@@ -25,8 +26,7 @@ section {
 
 p {
     display: block;
-    font-family: Quicksand;
-    color: grey;
+    color: black;
 }
 
 /* NAVIGATION MENU */
@@ -71,16 +71,21 @@ p {
     position: fixed;
     padding: 7%;
     border-radius: 50%;
-    border: none;
+    border: 3px white;
+    border-style: dotted solid;
     color: white;
-    background-color: turquoise;
+    background-color: black;
     z-index: 99;
     display: block;
+    animation: backspin 1s ease;
 }
 
 .button:hover {
-    background-color: black;
+    border: 3px black;
+    border-style: dotted solid;
+    background-color: white;
     transition: 0.5s ease;
+    animation: spin 1s ease;
 }
 
 .button1 {
@@ -91,14 +96,20 @@ p {
     border-radius: 50%;
     border: none;
     color: black;
-    background-color: turquoise;
+    border: 3px black;
+    border-style: dotted solid;
+    background-color: white;
     z-index: 99;
     display: none;
+    animation: backspin 1s ease;
 }
 
 .button1:hover {
-    background-color: white;
+    background-color: black;
     transition: 0.5s ease;
+    animation: spin 1s ease;
+    border: 3px white;
+    border-style: dotted solid;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -131,7 +142,7 @@ body, html {
     font-family: Quicksand;
     text-align: center;
     position: absolute;
-    top: 25%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
@@ -151,12 +162,16 @@ body, html {
 /* Section title text */
 .title {
     position: relative;
-    font-family: Quicksand;
+    font-family: 'Playfair Display', serif;
     text-decoration: bold;
     text-align: center;
     margin-top: 4%;
-    color: grey;
+    color: black;
     width: 100%;
+}
+
+.work {
+    margin-bottom: 3%;
 }
 
 /* Contact */
@@ -199,7 +214,7 @@ input[type=submit]:hover {
     left: 0;
     right: 0;
     top: 0;
-    background-color: lightcoral;
+    background-color: black;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -208,7 +223,7 @@ input[type=submit]:hover {
 }
 
 .portfolio:hover .overlay {
-    opacity: 1;
+    opacity: .8;
 }
 
 .portfolio {
@@ -216,10 +231,12 @@ input[type=submit]:hover {
 }
 
 .portfolio img {
+    filter: grayscale(100%);
     display: block;
     width: 100%;
     height: auto;
     min-width: 300px;
+    height: 250px;
     opacity: 1;
 }
 
@@ -246,12 +263,12 @@ input[type=submit]:hover {
 
 .parallax1 {
     background-image: url("images/do.jpg");
-    min-height: 130px;
+    min-height: 160px;
     overflow: hidden;
 }
 
 .parallax2 {
-    background-image: url("images/me.jpg");
+    background-image: url("images/side.jpg");
     min-height: 300px;
 }
 
@@ -323,6 +340,13 @@ input[type=submit]:hover {
     animation: type 3s;
 }
 
+.spin {
+    animation: spin 1s;
+}
+
+.backspin {
+    animation: backspin 1s;
+}
 /* keyframes */
 
 @keyframes fall {
@@ -397,5 +421,23 @@ input[type=submit]:hover {
     100% {
         opacity: 1;
         transform: none;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes backspin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
     }
 }
