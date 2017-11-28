@@ -30,21 +30,25 @@
 <body>
 
   <div id="nav" class="menubg">
-    <button class="button1" onclick="closeNav()" id="close"></a></button>
+    <button class="button1" onclick="closeNav()" id="close">
+      <i class="fa fa-angle-left"></i>
+    </button>
     <div class="menu">
-      <a href="#home" onclick="closeNav()">HOME</a>
+      <a href="#" onclick="closeNav()">HOME</a>
       <a href="#me" onclick="closeNav()">ABOUT ME</a>
       <a href="#projects" onclick="closeNav()">PORTFOLIO</a>
       <a href="#contact" onclick="closeNav()">CONTACT</a>
     </div>
 
   </div>
-  <button class="button" onclick="openNav()" id="open"></button>
+  <button class="button" onclick="openNav()" id="open">
+    <i class="fa fa-angle-right" id="arrow"></i>
+  </button>
   <!-- Use any element to open/show the overlay navigation menu -->
 
   <!-- HOME PAGE -->
   <section id="home" class="wow fadein">
-    <div class="hero-image">
+    <div class="hero-image wow fadein">
       <div class="hero-text">
           <h1 class="wow fadedown">Hey, I'm Stephanie</h1>
           <a href="https://www.linkedin.com/in/stephanie-bao-96a433116/">linkedin</a> -

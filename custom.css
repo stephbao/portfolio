@@ -6,6 +6,7 @@ body {
     margin: 0;
     color: black;
     background-color: white;
+    height: 100%;
 }
 
 section {
@@ -20,6 +21,10 @@ section {
 .container {
     text-align: center;
     display: block;
+}
+
+html {
+    height: 100%;
 }
 
 /* TYPOGRAPHY */
@@ -80,6 +85,16 @@ p {
     animation: backspin 1s ease;
 }
 
+.button i {
+    color: white;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
 .button:hover {
     border: 3px black;
     border-style: dotted solid;
@@ -104,6 +119,16 @@ p {
     animation: backspin 1s ease;
 }
 
+.button1 i {
+    color: black;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
 .button1:hover {
     background-color: black;
     transition: 0.5s ease;
@@ -112,7 +137,6 @@ p {
     border-style: dotted solid;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
     .menubg a {font-size: 20px}
     .menubg {
@@ -122,16 +146,13 @@ p {
     }
 }
 
-body, html {
-    height: 100%;
-}
-
 /* The hero image */
 .hero-image {
     background-color: transparent;
     border: 10px solid black;
     height: 90%;
     width: 90%;
+    opacity: 1;
     margin-top: 2.5%;
     margin-left: 5%;
     position: relative;
@@ -152,6 +173,7 @@ body, html {
     font-family: 'Playfair Display', serif;
     color: black;
     font-weight: bold;
+    text-decoration: overline;
 }
 
 .hero-text a {
@@ -297,18 +319,7 @@ input[type=submit]:hover {
     position: relative;
     color: #fff;
     text-decoration: none;
-    -webkit-animation-name: fall;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-play-state: running;
-    animation-name: fall;
-    animation-duration: 1.2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
+    animation: fall 1.2s linear 0s infinite running;
 }
 
     /* about me */
@@ -347,6 +358,11 @@ input[type=submit]:hover {
 .backspin {
     animation: backspin 1s;
 }
+
+.expand {
+    animation: expand 2s;
+}
+
 /* keyframes */
 
 @keyframes fall {
@@ -439,5 +455,16 @@ input[type=submit]:hover {
     }
     to {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes expand {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 90%;
+        opacity: 1;
     }
 }

@@ -1,19 +1,19 @@
-/* Open when someone clicks on the span element */
+/* Open when button is clicked */
 function openNav() {
     document.getElementById("nav").style.width = "100%";
     document.getElementById("open").style.display = "none";
     document.getElementById("close").style.display = "block";
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
+/* Close when button is clicked */
 function closeNav() {
     document.getElementById("nav").style.width = "0%";
     document.getElementById("open").style.display = "block";
     document.getElementById("close").style.display = "none";
 }
 
+/* Smooth Scrolling - credit to online source*/
 $(document).ready(function(){
-  // Add smooth scrolling to all links
   $("a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
@@ -23,6 +23,15 @@ $(document).ready(function(){
       }, 700, function(){
         window.location.hash = hash;
       });
-    } // End if
+    }
   });
+});
+
+/* Rotate circle button on scroll */
+$(window).scroll(function() {
+  var theta = $(window).scrollTop()/300 % (Math.PI);
+  $('#open').css({ transform: 'rotate(' + theta + 'rad)' });
+  $('#arrow').css({ transform: 'rotate(-' + theta + 'rad)' });
+  $('#open').css({ transform: 'rotate(-' + theta + 'rad)' });
+  $('#arrow').css({ transform: 'rotate(' + theta + 'rad)' });
 });
