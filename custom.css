@@ -62,7 +62,7 @@ p {
 }
 
 .menubg a:hover {
-    color: turquoise;
+    text-decoration: overline;
 }
 
 .button {
