@@ -5,7 +5,7 @@ body {
     overflow: auto;
     margin: 0;
     color: black;
-    background-color: white;
+    background-color: #f5f5f5;
     height: 100%;
 }
 
@@ -51,7 +51,7 @@ p {
     left: 0;
     top: 0;
     background-color: black;
-    opacity: 1;
+    opacity: .8;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -155,8 +155,8 @@ p {
 
 /* The hero image */
 .hero-image {
-    background-color: transparent;
-    border: 10px solid black;
+    background-color: white;
+    border: 2px solid black;
     height: 90%;
     width: 90%;
     opacity: 1;
@@ -180,7 +180,7 @@ p {
     font-family: 'Playfair Display', serif;
     color: black;
     font-weight: bold;
-    text-decoration: overline;
+    text-decoration: none;
 }
 
 .hero-text a {
@@ -264,7 +264,7 @@ input[type=submit]:hover {
     width: 100%;
     height: auto;
     max-width: 350px;
-    height: 250px;
+    max-height: 250px;
     opacity: 1;
 }
 
@@ -506,5 +506,20 @@ input[type=submit]:hover {
     100% {
         height: 90%;
         opacity: 1;
+    }
+}
+
+/* Don't run animations on mobile (iPhone 6,7,8) */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .wow {
+      visibility: visible !important;
+      -webkit-animation: none !important;
+         -moz-animation: none !important;
+           -o-animation: none !important;
+          -ms-animation: none !important;
+              animation: none !important;
     }
 }
