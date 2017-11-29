@@ -14,6 +14,13 @@ section {
     display: block;
 }
 
+footer {
+    display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
 #home {
     height: 100%;
 }
@@ -253,11 +260,10 @@ input[type=submit]:hover {
 }
 
 .portfolio img {
-    filter: grayscale(100%);
     display: block;
     width: 100%;
     height: auto;
-    min-width: 300px;
+    max-width: 350px;
     height: 250px;
     opacity: 1;
 }
@@ -267,6 +273,7 @@ input[type=submit]:hover {
     color: white;
     font-size: 20px;
     position: absolute;
+    display; block;
     overflow: hidden;
     top: 50%;
     left: 50%;
@@ -296,13 +303,22 @@ input[type=submit]:hover {
 
 /* Arrow Button */
 
-.down {
+.down{
     position: absolute;
     left: 49.5%;
     bottom: 1%;
     display: block;
     text-align: center;
 }
+
+.up{
+    position: absolute;
+    left: 49.5%;
+    bottom: 1%;
+    display: block;
+    text-align: center;
+}
+
 
 .arrow {
     font-size: 36px;
@@ -320,6 +336,13 @@ input[type=submit]:hover {
     color: #fff;
     text-decoration: none;
     animation: fall 1.2s linear 0s infinite running;
+}
+
+.up a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    animation: rise 1.2s linear 0s infinite running;
 }
 
     /* about me */
@@ -366,6 +389,23 @@ input[type=submit]:hover {
 /* keyframes */
 
 @keyframes fall {
+    0% {
+        top: -10px;
+        opacity: 0;
+    }
+
+    30% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 15px;
+        opacity: 0;
+    }
+}
+
+@keyframes rise {
     0% {
         top: -10px;
         opacity: 0;
