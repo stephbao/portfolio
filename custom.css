@@ -290,6 +290,11 @@ input[type=submit]:hover {
     -ms-transform: translate(-50%, -50%);
 }
 
+.thumbnail {
+    max-width: 350px;
+    max-height: 250px;
+}
+
 /* Parallax */
 .parallax1, .parallax2 {
     display: block;
