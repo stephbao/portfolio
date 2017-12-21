@@ -1,37 +1,45 @@
-/* Open when button is clicked */
-function openNav() {
-    document.getElementById("nav").style.width = "100%";
-    document.getElementById("open").style.display = "none";
-    document.getElementById("close").style.display = "block";
+/* Open Home Page onClick */
+function openHome() {
+    document.getElementById("about").style.display = "none";
+    document.getElementById("portfolio").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+
+    document.getElementById("linkabout").style.color = "dimgrey";
+    document.getElementById("linkportfolio").style.color = "dimgrey";
+    document.getElementById("linkcontact").style.color = "dimgrey";
 }
 
-/* Close when button is clicked */
-function closeNav() {
-    document.getElementById("nav").style.width = "0%";
-    document.getElementById("open").style.display = "block";
-    document.getElementById("close").style.display = "none";
+
+/* Open About Page onClick */
+function openAbout() {
+    document.getElementById("about").style.display = "block";
+    document.getElementById("portfolio").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+
+
+    document.getElementById("linkabout").style.color = "#EB8888";
+    document.getElementById("linkportfolio").style.color = "dimgrey";
+    document.getElementById("linkcontact").style.color = "dimgrey";
 }
 
-/* Smooth Scrolling - credit to online source*/
-$(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 700, function(){
-        window.location.hash = hash;
-      });
-    }
-  });
-});
+/* Open Portfolio Page onClick */
+function openPortfolio() {
+    document.getElementById("about").style.display = "none";
+    document.getElementById("portfolio").style.display = "block";
+    document.getElementById("contact").style.display = "none";
 
-/* Rotate circle button on scroll */
-$(window).scroll(function() {
-  var theta = $(window).scrollTop()/300 % (Math.PI);
-  $('#open').css({ transform: 'rotate(' + theta + 'rad)' });
-  $('#arrow').css({ transform: 'rotate(-' + theta + 'rad)' });
-  $('#open').css({ transform: 'rotate(-' + theta + 'rad)' });
-  $('#arrow').css({ transform: 'rotate(' + theta + 'rad)' });
-});
+    document.getElementById("linkabout").style.color = "dimgrey";
+    document.getElementById("linkportfolio").style.color = "#EB8888";
+    document.getElementById("linkcontact").style.color = "dimgrey";
+}
+
+/* Open Contact Page onClick */
+function openContact() {
+    document.getElementById("about").style.display = "none";
+    document.getElementById("portfolio").style.display = "none";
+    document.getElementById("contact").style.display = "block";
+
+    document.getElementById("linkabout").style.color = "dimgrey";
+    document.getElementById("linkportfolio").style.color = "dimgrey";
+    document.getElementById("linkcontact").style.color = "#EB8888";
+}
