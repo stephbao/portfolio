@@ -10,15 +10,11 @@
 }
 
 /* SECTIONS */
-#about {
-    display: none;
+#home {
+    display: block;
 }
 
-#portfolio {
-    display: none;
-}
-
-#contact {
+#about, #portfolio, #contact, #cmlh, #todo {
     display: none;
 }
 
@@ -61,6 +57,10 @@ section {
     margin-bottom: 25px
 }
 
+.homerow {
+    top: 0px;
+}
+
 /* TYPOGRAPHY */
 
 h3 {
@@ -85,6 +85,10 @@ h2 {
     width: 100%;
     font-size: 30px;
     display: block;
+}
+
+.title a {
+    font-size: 18px;
 }
 
 p {
@@ -149,6 +153,10 @@ a {
     margin-bottom: 50px;
 }
 
+.homeimg {
+    width: 100%;
+}
+
 /* Portfolio images - hover */
 
 .overlay {
@@ -193,6 +201,10 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+}
+
+.text:hover {
+    color: white;
 }
 
 /* Animations */

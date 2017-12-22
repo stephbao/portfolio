@@ -32,25 +32,34 @@
   <!-- NAVIGATION MENU -->
   <div class="side">
     <div class="menu">
-      <a href="#home" id="linkhome" onclick="openHome()"><h3>sbao</h3></a>
-      <a href="#about" id="linkabout" onclick="openAbout()">about</a>
-      <a href="#portfolio" id="linkportfolio" onclick="openPortfolio()">portfolio</a>
+      <a href="#" id="linkhome" onclick="openHome()"><h3>sbao</h3></a>
+      <a href="#" id="linkabout" onclick="openAbout()">about</a>
+      <a href="#" id="linkportfolio" onclick="openPortfolio()">portfolio</a>
       <a href="resume.pdf" target="_blank">resume</a>
-      <a href="#contact" id="linkcontact" onclick="openContact()">contact</a>
+      <a href="#" id="linkcontact" onclick="openContact()">contact</a>
     </div>
   </div>
   <!-- /NAV MENU -->
 
   <!-- HOME -->
   <section id="home">
-
+    <div class="container homerow">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="images/mehome.JPG" class="homeimg">
+                <img src="images/chicago.JPG" class="homeimg">
+                <img src="images/ramen.JPG" class="homeimg">
+                <img src="images/library.JPG" class="homeimg">
+                <img src="images/newyork.JPG" class="homeimg">
+            </div>
+        </div>
+    </div>
   </section>
   <!-- /HOME -->
 
   <!-- ABOUT ME -->
   <section id="about">
     <div class="title"><h2>about me</h2></div>
-
     <div class="container">
     <div class="row">
       <div class="col-md-4">
@@ -71,15 +80,15 @@
 
   <!-- PORTFOLIO -->
   <section id="portfolio">
-    <div class="title"><h2>portfolio *UNDER CONSTRUCTION*</h2></div>
+    <div class="title"><h2>portfolio *in progress: write-ups/descriptions*</h2></div>
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <div class="img-responsive">
+          <div class="img-responsive" onclick="pCMLH()">
             <div class="portfolio">
               <img src="images/cmlh.jpg">
               <div class="overlay">
-                <div class="text">hci research</div>
+                <a href="#" class="text">hci research</a>
               </div>
             </div>
           </div>
@@ -88,9 +97,9 @@
         <div class="col-sm-3">
           <div class="img-responsive">
             <div class="portfolio">
-              <img src="images/todo.jpg">
+              <img src="images/meal.jpg">
               <div class="overlay">
-                <div class="text">mobile prototype</div>
+                <div class="text">user research</div>
               </div>
             </div>
           </div>
@@ -99,9 +108,9 @@
         <div class="col-sm-3">
           <div class="img-responsive">
             <div class="portfolio">
-              <img src="images/pillow.jpg">
+              <img src="images/book.jpg">
               <div class="overlay">
-                <div class="text">website prototype</div>
+                <div class="text">children's counting book</div>
               </div>
             </div>
           </div>
@@ -112,9 +121,20 @@
         <div class="col-sm-3">
           <div class="img-responsive">
             <div class="portfolio">
-              <img src="images/series.jpg">
+              <img src="images/pillow.jpg">
               <div class="overlay">
-                <div class="text">poster series design</div>
+                <div class="text">website prototype</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="img-responsive" onclick="pTODO()">
+            <div class="portfolio">
+              <img src="images/todo.jpg">
+              <div class="overlay">
+                <a href="#" class="text">mobile app prototype</a>
               </div>
             </div>
           </div>
@@ -131,16 +151,6 @@
           </div>
         </div>
 
-        <div class="col-sm-3">
-          <div class="img-responsive">
-            <div class="portfolio">
-              <img src="images/book.jpg">
-              <div class="overlay">
-                <div class="text">children's counting book</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -179,6 +189,73 @@
 
 
   <!-- /CONTACT-->
+
+<!-- PORTFOLIO -->
+  <section id="cmlh">
+    <div class="title">
+        <a href="#" onclick="openPortfolio()">return to portfolio</a>
+        <h2>center for machine learning and health</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <p><b>context</b></p>
+                <p>Over Summer 2017, I worked as a Research Intern at the Center for Machine Learning and Health in Pittsburgh, PA. This study was as a follow-up to a previous study conducted by my researcher.</p>
+                <p><b>goals</b></p>
+                <p>Understand the differences behind people’s perceptions of algorithmic decisions and human decisions, specifically with human-in-the-loop (HitL) scenarios.</p>
+                <ul>
+                <li>Study related papers</li>
+                <li>Survey design and analysis</li>
+                <li>Write a research paper</li>
+                </ul>
+                <p><b>process</b></p>
+                <p>The first step was to gather related research papers to decide the direction of the study. The original research paper that this study was based on compared only the perceptions of algorithmic decisions vs human decisions. The results from the study found that while people believed algorithmic decisions are less error-prone and unbiased, they are unable to understand special cases and external factors. We decided to focus on a combination of the two (HitL).</p>
+                <p>The next step was to design the study. We chose a 4x5 study with four different scenarios (assignment, evaluation, hiring, and scheduling) and five combinations of data analyzers and decision makers (algorithm only, three HitL combinations, human only).</p>
+                <p>We then began designing the survey. We were able to adapt the descriptions and questions from the first survey. However, we went through multiple iterations on the wordings as people found it difficult to differentiate between two of the three HitL scenarios. Eventually, we were able to secure a satisfactory accuracy rate.</p>
+                <p>After we received ~1600 responses, I cleansed and organized the data. I used Python to parse through the CSV file of responses to create a readable data table. Afterwards, I used SAS JMP to perform the statistical analyses on the quantitative responses. We then performed qualitative analysis on the open-ended answers by creating a coding scheme based on the responses and manually coded each of the responses.</p>
+                <p><b>results</b></p>
+                <p>We discovered for the assignment task requiring mechanical skills, decision maker had no effect. As tasks required more human skills, algorithmic and human-in- the-loop decisions were perceived increasingly more negatively than human decisions. For scheduling, the human analysis-based algorithmic decision was perceived as positively as the human decision in all aspects. For hiring, some human-in- the-loop decisions were perceived as more fair and trustworthy than algorithmic decisions, but less than human decisions. For evaluation, all human-in- the-loop decisions were perceived similarly to the algorithmic decisions.</p>
+                <p>Feel free to send me an e-mail if you would like to read the paper and learn more about the implications behind this study.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="todo">
+    <div class="title">
+        <a href="#" onclick="openPortfolio()">return to portfolio</a>
+        <h2>todo mobile application</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <p><b>context</b></p>
+                <p>A todo app allows a user to create groups with his or her friends and add tasks inside that will be shared to everyone in the group. The user also has the option to view all tasks created by him or shared with him, ordered by priority.</p>
+                <p><b>user goals</b></p>
+                <p>The goal of a user is to create and share tasks with his or her friends in the most efficient, intuitive way possible. The targeted use of the app is aimed toward people who wish to share a to-do list with a specific group of people. It is focused toward more permanent groups, groups that won’t change after just one task; for example, home, work, or project groups. The todo can help people that live together to easily organize chores and tasks that will be shared to the rest of the household.</p>
+                <p><b>process</b></p>
+                <p>To start, I downloaded other todo mobile and web applications and searched for their strengths and weaknesses.</p>
+                <p>Paper Prototypes</p>
+                <img src="https://image.prntscr.com/image/ifyaCAIQTKunklHygWNTIw.png" style="width: 75%">
+                <p></p>
+                <p>User Studies</p>
+                <p>I recruited colleagues and friends to conduct task analyses using the paper prototype. The main takeaways I discovered were:</p>
+                <ul>
+                    <li>To add a complete/done button after creating a new group or a new task (make it more obvious how to “complete” a task)</li>
+                    <li>Show priority in the task list</li>
+                    <li>Change focus to be more group-centered rather than task centered</li>
+                </ul>
+                <p><b>design considerations</b></p>
+                <p>I mainly took into consideration the ease in which a user should be able to create and share a task. I kept the action of adding a task to a group simple, allowing a user to name the task, select its priority, and choose which groups to share the task to. I made the background of the app a gradient of blue and green as it matches the color of the social connection icons (contacts list, Facebook, email). It is a subtle, calming color that does not affect the readability of the text on the screen.</p>
+                <p><b>design rationale</b></p>
+                <p>I believed that it would be more organized for tasks to be placed in set groups “pages” instead of having members being assigned to a task each time. By doing so, it easily allows the user to separate out which tasks are for what group (i.e. family, work, etc), instead of viewing a gigantic list of unorganized tasks (the user would have to click into a task to view to whom it was shared with.) Also, as of now, navigating through the app works through a series of clicks. However, the one feature I would also want to be done through swiping would be the deletion feature. The majority of apps today with listed items may also be deleted through swiping left and seeing a delete option on that item similar to what I have designed to happen if the trash icon is clicked. But just in case, I would want to incorporate both the swipe and the trash icon. While the swipe is more intuitive and efficient for knowledgeable users, it is not nearly as intuitive for new users as the trash can icon.</p>
+                <p><b>product</b></p>
+                <p>The final product was a high-fidelity prototype created with Sketch and InVision.</p>
+                <p>Link to the live prototype on InVision: <a href="https://invis.io/48DMVCFKU">https://invis.io/48DMVCFKU</a>.</p>
+            </div>
+        </div>
+    </div>
+  </section>
 
 </body>
 
