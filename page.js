@@ -6,6 +6,10 @@ function openHome() {
     document.getElementById("home").style.display = "block";
     document.getElementById("cmlh").style.display = "none";
     document.getElementById("todo").style.display = "none";
+    document.getElementById("pillow").style.display = "none";
+    document.getElementById("meal").style.display = "none";
+    document.getElementById("counting").style.display = "none";
+    document.getElementById("twitch").style.display = "none";
 
 
     document.getElementById("linkabout").style.color = "dimgrey";
@@ -22,6 +26,10 @@ function openAbout() {
     document.getElementById("home").style.display = "none";
     document.getElementById("cmlh").style.display = "none";
     document.getElementById("todo").style.display = "none";
+    document.getElementById("pillow").style.display = "none";
+    document.getElementById("meal").style.display = "none";
+    document.getElementById("counting").style.display = "none";
+    document.getElementById("twitch").style.display = "none";
 
 
     document.getElementById("linkabout").style.color = "#EB8888";
@@ -37,6 +45,10 @@ function openPortfolio() {
     document.getElementById("home").style.display = "none";
     document.getElementById("cmlh").style.display = "none";
     document.getElementById("todo").style.display = "none";
+    document.getElementById("pillow").style.display = "none";
+    document.getElementById("meal").style.display = "none";
+    document.getElementById("counting").style.display = "none";
+    document.getElementById("twitch").style.display = "none";
 
 
     document.getElementById("linkabout").style.color = "dimgrey";
@@ -52,6 +64,10 @@ function openContact() {
     document.getElementById("home").style.display = "none";
     document.getElementById("cmlh").style.display = "none";
     document.getElementById("todo").style.display = "none";
+    document.getElementById("pillow").style.display = "none";
+    document.getElementById("meal").style.display = "none";
+    document.getElementById("counting").style.display = "none";
+    document.getElementById("twitch").style.display = "none";
 
     document.getElementById("linkabout").style.color = "dimgrey";
     document.getElementById("linkportfolio").style.color = "dimgrey";
@@ -65,5 +81,25 @@ function pCMLH() {
 
 function pTODO() {
     document.getElementById("todo").style.display = "block";
+    document.getElementById("portfolio").style.display = "none";
+}
+
+function pPILLOW() {
+    document.getElementById("pillow").style.display = "block";
+    document.getElementById("portfolio").style.display = "none";
+}
+
+function pMEAL() {
+    document.getElementById("meal").style.display = "block";
+    document.getElementById("portfolio").style.display = "none";
+}
+
+function pCOUNTING() {
+    document.getElementById("counting").style.display = "block";
+    document.getElementById("portfolio").style.display = "none";
+}
+
+function pTWITCH() {
+    document.getElementById("twitch").style.display = "block";
     document.getElementById("portfolio").style.display = "none";
 }
