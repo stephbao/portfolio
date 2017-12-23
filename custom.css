@@ -14,7 +14,7 @@
     display: block;
 }
 
-#about, #portfolio, #contact, #cmlh, #todo, #pillow, #meal {
+#about, #portfolio, #contact, #cmlh, #todo, #pillow, #meal, #counting, #twitch {
     display: none;
 }
 
