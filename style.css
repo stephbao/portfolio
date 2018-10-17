@@ -25,6 +25,7 @@ body {
     margin: 0;
     color: dimgrey;
     height: 100%;
+    background-color: #fcfcfc;
 }
 
 .shiftdown {
@@ -46,8 +47,12 @@ a:hover {
     text-decoration: underline;
 }
 
-h2 {
+h2,h4 {
     text-align: center;
+}
+
+h4 {
+    margin-bottom: 5%;
 }
 
 h2.title {
@@ -91,7 +96,8 @@ b {
 .doodle {
     margin: auto;
     margin-top: 3%;
-    width: 490px;
+    width: 50%;
+    min-width: 300px;
     display: block;
 }
 
