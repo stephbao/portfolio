@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stephanie Bao</title>
+  <title>Under Construction</title>
   <link rel="shortcut icon" href="favicon.png">
 
   <!-- bootstrap-->
@@ -11,356 +11,66 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- styles -->
-  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- javascript -->
   <script src="page.js"></script>
 
-  <!-- wow -->
+  <!-- animate -->
   <script src="assets/wow/dist/wow.min.js"></script>
   <script>
   new WOW().init();
   </script>
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 </head>
 
 <body>
-  <!-- NAVIGATION MENU -->
-  <div class="side">
-    <div class="menu">
-      <a href="#" id="linkhome" onclick="openHome()"><h3>sbao</h3></a>
-      <a href="#" id="linkabout" onclick="openAbout()">about</a>
-      <a href="#" id="linkportfolio" onclick="openPortfolio()">portfolio</a>
-      <a href="resume.pdf" target="_blank">resume</a>
-      <a href="#" id="linkcontact" onclick="openContact()">contact</a>
+
+<!-- nav bar -->
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">sb</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">home</a></li>
+        <li><a href="about.html">about me</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="graphics.html">graphics</a></li>
+      </ul>
     </div>
   </div>
-  <!-- /NAV MENU -->
+</nav>
 
-  <!-- HOME -->
-  <section id="home">
-    <div class="container homerow">
-        <div class="row">
-            <div class="col-sm-12">
-                <img src="images/mehome.JPG" class="homeimg">
-                <img src="images/chicago.JPG" class="homeimg">
-                <img src="images/ramen.JPG" class="homeimg">
-                <img src="images/library.JPG" class="homeimg">
-                <img src="images/newyork.jpg" class="homeimg">
-            </div>
-        </div>
-    </div>
-  </section>
-  <!-- /HOME -->
+<!-- /navbar -->
 
-  <!-- ABOUT ME -->
-  <section id="about">
-    <div class="title"><h2>about me</h2></div>
-    <div class="container">
+<!-- home -->
+
+<section id="home">
+  <div class="container shiftdown">
     <div class="row">
-      <div class="col-md-4">
-        <img src="images/me.jpg" class="me">
-      </div>
-      <div class="col-md-6">
-        <p>Hello! I'm <b>Stephanie Bao</b>, a junior studying <b>Statistics and Machine Learning</b> with an additional major in <b>Human-Computer Interaction</b> at <b>Carnegie Mellon University</b>. I will be graduating early in Fall 2018.</p>
-        <p>I am passionate about <b>data-driven research</b> and <b>design</b>. You can find me at
-        any step of the process, from reading a countless amount of papers, to conducting user research,
-        analyzing large sets of data, or designing a feasible solution.
-        <p>Outside of work, I am an avid gamer, dog lover, and chicken nugget fanatic.</p>
+      <div class="col-md-12">
+        <h2>Hello! I'm <p id="name">Stephanie Bao</p>.</h2>
       </div>
     </div>
-    </div>
-
-  </section>
-  <!-- /ABOUT ME -->
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <div class="title"><h2>portfolio</h2></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="img-responsive" onclick="pCMLH()">
-            <div class="portfolio">
-              <img src="images/cmlh.jpg">
-              <div class="overlay">
-                <a href="#" class="text">hci research</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="img-responsive" onclick="pMEAL()">
-            <div class="portfolio">
-              <img src="images/meal.jpg">
-              <div class="overlay">
-                <a href="#" class="text">user research</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="img-responsive" onclick="pCOUNTING()">
-            <div class="portfolio">
-              <img src="images/book.jpg">
-              <div class="overlay">
-                <a href="#" class="text">children's counting book</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="img-responsive" onclick="pPILLOW()">
-            <div class="portfolio">
-              <img src="images/pillow.jpg">
-              <div class="overlay">
-                <a href="#" class="text">website prototype</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="img-responsive" onclick="pTODO()">
-            <div class="portfolio">
-              <img src="images/todo.jpg">
-              <div class="overlay">
-                <a href="#" class="text">mobile app prototype</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="img-responsive" onclick="pTWITCH()">
-            <div class="portfolio">
-              <img src="images/twitch.jpg">
-              <div class="overlay">
-                <a href="#" class="text">google chrome extension</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <div class="row pics">
+      <div class="col-md-12">
+        <img src="images/home.png" class="doodle">
       </div>
     </div>
-  </section>
-  <!-- /PORTFOLIO -->
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="title"><h2>contact</h2></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10">
-          <p><b>e-mail:</b></p>
-          <a href="mailto:sbao@andrew.cmu.edu"><p>sbao@andrew.cmu.edu</p></a>
+</section>
 
-          <div class="icon">
-            <a href="https://www.linkedin.com/in/stephanie-bao-96a433116/" target="_blank">
-              <i class="fa fa-linkedin-square"></i>
-            </a>
-          </div>
-
-          <div class="icon">
-            <a href="https://github.com/stephbao/" target="_blank">
-              <i class="fa fa-github-square"></i>
-            </a>
-          </div>
-
-          <div class="icon">
-            <a href="https://www.instagram.com/stephaniebao/" target="_blank">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- /CONTACT-->
-
-<!-- PORTFOLIO -->
-  <section id="cmlh">
-    <div class="title">
-        <a href="#" onclick="openPortfolio()">return to portfolio</a>
-        <h2>center for machine learning and health</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-                <p><b>context</b></p>
-                <p>Over Summer 2017, I worked as a Research Intern at the Center for Machine Learning and Health in Pittsburgh, PA. This study was as a follow-up to a previous study conducted by my researcher.</p>
-                <p><b>goals</b></p>
-                <p>Understand the differences behind people’s perceptions of algorithmic decisions and human decisions, specifically with human-in-the-loop (HitL) scenarios.</p>
-                <ul>
-                <li>Study related papers</li>
-                <li>Survey design and analysis</li>
-                <li>Write a research paper</li>
-                </ul>
-                <p><b>process</b></p>
-                <p>The first step was to gather related research papers to decide the direction of the study. The original research paper that this study was based on compared only the perceptions of algorithmic decisions vs human decisions. The results from the study found that while people believed algorithmic decisions are less error-prone and unbiased, they are unable to understand special cases and external factors. We decided to focus on a combination of the two (HitL).</p>
-                <p>The next step was to design the study. We chose a 4x5 study with four different scenarios (assignment, evaluation, hiring, and scheduling) and five combinations of data analyzers and decision makers (algorithm only, three HitL combinations, human only).</p>
-                <p>We then began designing the survey. We were able to adapt the descriptions and questions from the first survey. However, we went through multiple iterations on the wordings as people found it difficult to differentiate between two of the three HitL scenarios. Eventually, we were able to secure a satisfactory accuracy rate.</p>
-                <p>After we received ~1600 responses, I cleansed and organized the data. I used Python to parse through the CSV file of responses to create a readable data table. Afterwards, I used SAS JMP to perform the statistical analyses on the quantitative responses. We then performed qualitative analysis on the open-ended answers by creating a coding scheme based on the responses and manually coded each of the responses.</p>
-                <p><b>results</b></p>
-                <p>We discovered for the assignment task requiring mechanical skills, decision maker had no effect. As tasks required more human skills, algorithmic and human-in- the-loop decisions were perceived increasingly more negatively than human decisions. For scheduling, the human analysis-based algorithmic decision was perceived as positively as the human decision in all aspects. For hiring, some human-in- the-loop decisions were perceived as more fair and trustworthy than algorithmic decisions, but less than human decisions. For evaluation, all human-in- the-loop decisions were perceived similarly to the algorithmic decisions.</p>
-                <p>Feel free to send me an e-mail if you would like to read the paper and learn more about the implications behind this study.</p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section id="todo">
-    <div class="title">
-        <a href="#" onclick="openPortfolio()">return to portfolio</a>
-        <h2>todo - mobile application prototype</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-                <p><b>context</b></p>
-                <p>A todo app allows a user to create groups with his or her friends and add tasks inside that will be shared to everyone in the group. The user also has the option to view all tasks created by him or shared with him, ordered by priority.</p>
-                <p>Fall 2017</p>
-                <p><b>user goals</b></p>
-                <p>The goal of a user is to create and share tasks with his or her friends in the most efficient, intuitive way possible. The targeted use of the app is aimed toward people who wish to share a to-do list with a specific group of people. It is focused toward more permanent groups, groups that won’t change after just one task; for example, home, work, or project groups. The todo can help people that live together to easily organize chores and tasks that will be shared to the rest of the household.</p>
-                <p><b>process</b></p>
-                <p>To start, I downloaded other todo mobile and web applications and searched for their strengths and weaknesses.</p>
-                <p>Paper Prototypes</p>
-                <img src="https://image.prntscr.com/image/ifyaCAIQTKunklHygWNTIw.png" style="width: 75%">
-                <p></p>
-                <p>User Studies</p>
-                <p>I recruited colleagues and friends to conduct task analyses using the paper prototype. The main takeaways I discovered were:</p>
-                <ul>
-                    <li>To add a complete/done button after creating a new group or a new task (make it more obvious how to “complete” a task)</li>
-                    <li>Show priority in the task list</li>
-                    <li>Change focus to be more group-centered rather than task centered</li>
-                </ul>
-                <p><b>design considerations</b></p>
-                <p>I mainly took into consideration the ease in which a user should be able to create and share a task. I kept the action of adding a task to a group simple, allowing a user to name the task, select its priority, and choose which groups to share the task to. I made the background of the app a gradient of blue and green as it matches the color of the social connection icons (contacts list, Facebook, email). It is a subtle, calming color that does not affect the readability of the text on the screen.</p>
-                <p><b>design rationale</b></p>
-                <p>I believed that it would be more organized for tasks to be placed in set groups “pages” instead of having members being assigned to a task each time. By doing so, it easily allows the user to separate out which tasks are for what group (i.e. family, work, etc), instead of viewing a gigantic list of unorganized tasks (the user would have to click into a task to view to whom it was shared with.) Also, as of now, navigating through the app works through a series of clicks. However, the one feature I would also want to be done through swiping would be the deletion feature. The majority of apps today with listed items may also be deleted through swiping left and seeing a delete option on that item similar to what I have designed to happen if the trash icon is clicked. But just in case, I would want to incorporate both the swipe and the trash icon. While the swipe is more intuitive and efficient for knowledgeable users, it is not nearly as intuitive for new users as the trash can icon.</p>
-                <p><b>product</b></p>
-                <p>The final product was a high-fidelity prototype created with Sketch and InVision.</p>
-                <p>Link to the live prototype on InVision: <a href="https://invis.io/48DMVCFKU">https://invis.io/48DMVCFKU</a>.</p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section id="pillow">
-    <div class="title">
-        <a href="#" onclick="openPortfolio()">return to portfolio</a>
-        <h2>flip stitch pillow - website prototype</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-                <p><b>context</b></p>
-                <p>Given a hypothetical client, the purpose of this project was to prototype an online store for a specialty boutique. The “client”, Flip Stitch Pillow, is a pillow store that specializes in handmade, custom decorative pillows.</p>
-                <p>Fall 2017</p>
-                <p><b>goals</b></p>
-                <ul>
-                <li>Design with the client in mind</li>
-                <li>Create a consistent theme that fits the purpose of the store</li>
-                <li>Low-fidelity prototyping to high-fidelity prototyping</li>
-                </ul>
-                <p><b>process</b></p>
-                <p>All images were taken from Google. I do not claim rights to any.</p>
-                <p>Low Fidelity Prototype</p>
-                <img src="https://image.prntscr.com/image/5Ac7-sJ5TgSrgPnb_CX4JQ.png" style="width: 75%">
-                <p></p>
-                <p>Medium Fidelity Prototype</p>
-                <img src="https://image.prntscr.com/image/4i600izNQ_W6rSkiE_qtOA.png" style="width: 75%">
-                <p></p>
-                <p>High Fidelity Prototype</p>
-                <a href="https://stephbao.github.io/pillow.github.io/">https://stephbao.github.io/pillow.github.io/</a>
-                <p></p>
-                <p>Note: only the cat pillow is functional.</p>
-                <p><b>design rationale</b></p>
-                <p>For my website design, I kept it extremely simplistic as they describe their product as being not dull. I wanted the products to stand out and not have the customer be distracted by any other elements on the screen. By keeping the website minimalistic, the customer would focus on the unique characteristics of the pillows and how they would fit into the customer’s home. I wanted the products to speak for themselves.</p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section id="meal">
-    <div class="title">
-        <a href="#" onclick="openPortfolio()">return to portfolio</a>
-        <h2>meal express</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-                <p><b>context</b></p>
-                <p>My project group was assigned to recreate an aspect of the lunch experience at Carnegie Mellon. Over a period of three months, we conducted: stakeholder interviews, sequence-flow models, cultural models, affinity diagrams, visioning, storyboarding, speed dating, survey design, and survey analysis in order to create a solution.</p>
-                <p><i>Background Information: all freshmen students are required to buy a meal plan for the entire year. Meal plans include blocks (which pay for the entire meal and can only be used once per time period) and dinex (which similar to a debit card that can only be used at CMU approved locations).</i></p>
-                <p>Fall 2017 | User Centered Research Evaluation</p>
-                <p><b>insights</b></p>
-                <p>After conducting these tests, we were able to identify several key factors. To begin, students generally don’t like the lunch experience. From our interview data, we found that students strongly value time, price, and health when deciding where to eat. They find campus locations to be inconveniently slow and inconsistent with their schedule. One thing we noticed was that the meal plan is a large factor in the lunch experience for undergrads. We saw that students stay on the meal plan for convenience, despites its flaws.</p>
-                <p> In order to narrow down the problems associated with the lunch experience, we decided to focus on the meal plan and see how we could maximize its convenience and usefulness. We found this to be important as there is currently a lack of incentive for upperclassmen to stay on the meal plan, as paying with card or cash saves more money. Students already have enough factors causing stress in their lives, and by staying on the meal plan, they do not have to worry about cooking or travelling far to buy food.
-                <p><b>solution</b></p>
-                <p>Our proposal is to implement a mobile app that allows users to order food provided by any on-campus dining locations and make payments on their phones. They can schedule orders online for a specific time and get alerts on their phones when the orders are ready without waiting in lines. The vendors receive orders from their systems and prepare food for customers. Customers then can just  tap or swipe their cards at a special pick up window to receive their food from a server. This app would only target meal plan users which would segment the flow of orders and people, as well as help retain users on the meal plan after their first year. Therefore, users can pay for the orders through their linked CMU meal plan account automatically.</p>
-                <p><b>report</b></p>
-                <p>We conducted a survey to evaluate student opinions on the meal plan. We focused on identifying key values of eaters and how they change given time constraints. We wrote a report on our findings and their implications on our product.</p>
-                <p>View our report <a href="files/report.pdf" target="_blank" style="text-decoration: underline;">here</a>.</p>
-                <p>Note: we understand that our (statistical) results are not significant given the small sample size.</p>
-                <p><b>poster</b></p>
-                <p>Our solution to the problems we identified. We focused on creating a (realistic) feasible solution that would benefit both the vendors and the consumers.</p>
-                <p>The following poster was designed by a teammate.</p>
-                <img src="https://image.prntscr.com/image/HMxjxK7OS1GJOcyOnn30fA.png" style="width: 75%">
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section id="counting">
-    <div class="title">
-        <a href="#" onclick="openPortfolio()">return to portfolio</a>
-        <h2>12 days of christmas- a counting book for children</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-                <p>Fall 2017 | Communication Design Fundamentals.</p>
-                <p>View my spreads <a href="files/12days.pdf" target="_blank" style="text-decoration: underline;">here</a>.</p>
-                <object width="500" height="550" data="files/12days.pdf"></object>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section id="twitch">
-    <div class="title">
-        <a href="#" onclick="openPortfolio()">return to portfolio</a>
-        <h2>track-it: a chat based sentiment analysis extension for twitch streams</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-                <p><b>context</b></p>
-                <p>The goal was to create a product that could be used by streamers or viewers of Twitch.Tv, a live streaming video platform. We had an interdisciplinary group of 6 members. I took a user research and design role by identifying the problems, proposing a solution, and working on and user testing the interface.</p>
-                <p>Fall 2016 | Special Topics: Twitch Plays Game Design</p>
-                <p><b>concept</b></p>
-                <p>The problem we decided work on was: How can we help the streamer create a better experience for the audience? From this starting point we decided to focus on the chat and how to generate analytics from the chat that the streamer can go through quickly to learn about the animosity and topics the audience was chatting about.</p>
-                <p>The main issue we faced was in presenting the data to the streamer in a concise manner so that they would be able to quickly understand what is going on. Streamers often play games that require a the majority of the player’s attention span, so it is difficult for them to read or interact with the chat while they are playing. We then came up with the idea of simply conveying the emotion of the chat. By doing so, the streamer would be able to at a glance, understanding the general feel of his or her chat.</p>
-                <p><b>product</b></p>
-                <p>Our final product was a Google Chrome extension. We used the AlchemyLanguage API to conduct sentimental analysis on the chat. Our API analyzed the chat for five emotions: happiness, sadness, anger, fear, and disgust. The interface of our extension displays the percentage happiness in the chat and the percentage of the most dominant negative emotion.</p>
-                <img src="https://image.prntscr.com/image/p5MWghEhRDmoAYTlmJyWGA.png" style="width: 75%;">
-            </div>
-        </div>
-    </div>
-  </section>
+<!-- /home -->
 
 </body>
 
