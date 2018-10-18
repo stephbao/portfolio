@@ -61,8 +61,17 @@ h2.title {
     text-decoration: underline;
 }
 
+h3 {
+    text-align: center;
+    line-height: 1.5;
+}
+
 b {
     color: #eb8888;
+}
+
+p {
+    line-height: 1.8;
 }
 
 /* NAVBAR */
@@ -70,7 +79,7 @@ b {
 .nav>li>a:focus, .nav>li>a:hover {
     color: #eb8888;
     text-decoration: underline;
-    background-color: transparent !important;
+    background-color: #fcfcfc !important;
 }
 
 .navbar-brand {
@@ -80,6 +89,10 @@ b {
 
 .navbar-brand:hover {
     color: #eb8888;
+}
+
+.navbar {
+    background-color: white;
 }
 
 /* HOME */
@@ -131,3 +144,51 @@ b {
 }
 
 /* PORTFOLIO */
+
+.cont {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+}
+
+.cont:hover .overlay {
+  opacity: .5;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intro {
+    text-align: left !important;
+}
+
+.job {
+    color: #eb8888;
+}
